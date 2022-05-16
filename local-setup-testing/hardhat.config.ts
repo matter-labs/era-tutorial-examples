@@ -26,4 +26,9 @@ module.exports = {
   solidity: {
     version: "0.8.11",
   },
+  networks: {
+    hardhat: {
+      zksync: true,
+    }
+  }
 };
