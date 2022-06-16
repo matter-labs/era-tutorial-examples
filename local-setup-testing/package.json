@@ -5,7 +5,7 @@
   "license": "MIT",
   "devDependencies": {
     "@matterlabs/hardhat-zksync-deploy": "^0.2.0",
-    "@matterlabs/hardhat-zksync-solc": "^0.3.2",
+    "@matterlabs/hardhat-zksync-solc": "^0.3.4",
     "@types/chai": "^4.3.0",
     "@types/mocha": "^9.1.0",
     "chai": "^4.3.6",
