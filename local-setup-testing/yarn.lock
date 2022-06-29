@@ -430,10 +430,10 @@
   dependencies:
     glob "^7.1.3"
 
-"@matterlabs/hardhat-zksync-solc@^0.3.2":
-  version "0.3.2"
-  resolved "https://registry.yarnpkg.com/@matterlabs/hardhat-zksync-solc/-/hardhat-zksync-solc-0.3.2.tgz#67cdac01d51b5d137673312376ad5b4a6f794ac4"
-  integrity sha512-PYhIJfsqdsU4Px/XGvvmgKI921VRb4Rjm6rNPsjHYh9bw9TKdUgCYLfx5DF36I7+t2pH4e5KST8GwvDKwqkOTg==
+"@matterlabs/hardhat-zksync-solc@^0.3.5":
+  version "0.3.5"
+  resolved "https://registry.yarnpkg.com/@matterlabs/hardhat-zksync-solc/-/hardhat-zksync-solc-0.3.5.tgz#73a94899e2a3f04a8125bd30f17c638b91ffbbd7"
+  integrity sha512-YTcxGKwNLmpwtiWurtXtRMYgM2WRdUTHWnZIsulCvzy6HA7vlFppBveb9usQw6+7yHngvfjEIsPXDye6b8vx2Q==
   dependencies:
     "@nomiclabs/hardhat-docker" "^2.0.0"
     dockerode "^3.3.1"
