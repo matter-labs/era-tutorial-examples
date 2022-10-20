@@ -11,12 +11,12 @@ const zkSyncDeploy = process.env.NODE_ENV == 'test' ? {
 
 module.exports = {
   zksolc: {
-    version: "1.1.5",
+    version: "1.2.0",
     compilerSource: "docker",
     settings: {
       experimental: {
         dockerImage: "matterlabs/zksolc",
-        tag: 'v1.1.5'
+        tag: 'v1.2.0'
       },
     },
   },
