@@ -23,7 +23,7 @@ const config: HardhatUserConfig = {
     compilerSource: 'binary',
     settings: {},
   },
-  defaultNetwork: 'hardhat',
+  defaultNetwork: 'zkSyncTestnet',
   networks: {
     hardhat: {
       // @ts-ignore

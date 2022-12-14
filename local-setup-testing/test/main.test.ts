@@ -37,9 +37,8 @@ describe('Greeter', function () {
 
   it("Should return the new greeting once it's changed", async () => {
     const greeter = await deployGreeter(deployer);
-    console.log('Deployeeeeddd');
+    console.log('Contract deployed');
     expect(await greeter.greet()).to.eq('Hi');
-    console.log('Hi is hi');
 
     const setGreetingTx = await greeter.setGreeting('Hola, mundo!');
     await setGreetingTx.wait();
