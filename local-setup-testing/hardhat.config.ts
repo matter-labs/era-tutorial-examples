@@ -21,12 +21,7 @@ const config: HardhatUserConfig = {
   zksolc: {
     version: '1.2.1',
     compilerSource: 'binary',
-    settings: {
-      experimental: {
-        dockerImage: 'matterlabs/zksolc',
-        tag: 'v1.2.0',
-      },
-    },
+    settings: {},
   },
   defaultNetwork: 'hardhat',
   networks: {
