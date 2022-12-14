@@ -28,7 +28,7 @@ const config: HardhatUserConfig = {
       },
     },
   },
-  defaultNetwork: 'zkSyncTestnet',
+  defaultNetwork: 'hardhat',
   networks: {
     hardhat: {
       // @ts-ignore
