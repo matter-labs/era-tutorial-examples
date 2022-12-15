@@ -14,7 +14,6 @@ async function deployGreeter(deployer: Deployer) {
     console.log('Deploying contract');
     const artifact = await deployer.loadArtifact('Greeter');
 
-    // return await deployer.deploy(artifact, ['Hi']);
     greeter = await deployer.deploy(artifact, ['Hi']);
   } catch (error) {
     console.error('Error deploying contract');
@@ -44,8 +43,6 @@ describe('Greeter', function () {
   });
 
   it("Should return the new greeting once it's changed", async () => {
-    // const greeter = await deployGreeter(deployer);
-    // console.log('Contract deployed');
     expect(await greeter.greet()).to.eq('Hi');
 
     const setGreetingTx = await greeter.setGreeting('Hola, mundo!');
