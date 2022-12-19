@@ -1,32 +1,39 @@
-require("@matterlabs/hardhat-zksync-deploy");
-require("@matterlabs/hardhat-zksync-solc");
+import { HardhatUserConfig } from 'hardhat/config';
 
-const zkSyncDeploy = process.env.NODE_ENV == 'test' ? {
-  zkSyncNetwork: "http://localhost:3050",
-  ethNetwork: "http://localhost:8545",
-} : {
-  zkSyncNetwork: "https://zksync2-testnet.zksync.dev",
-  ethNetwork: "goerli",
-};
+require('@matterlabs/hardhat-zksync-deploy');
+require('@matterlabs/hardhat-zksync-solc');
 
-module.exports = {
+// dynamically changes endpoints for local tests
+const zkSyncTestnet =
+  process.env.NODE_ENV == 'test'
+    ? {
+        url: 'http://localhost:3050',
+        ethNetwork: 'http://localhost:8545',
+        zksync: true,
+      }
+    : {
+        url: 'https://zksync2-testnet.zksync.dev',
+        ethNetwork: 'goerli',
+        zksync: true,
+      };
+
+const config: HardhatUserConfig = {
   zksolc: {
-    version: "1.2.0",
-    compilerSource: "docker",
-    settings: {
-      experimental: {
-        dockerImage: "matterlabs/zksolc",
-        tag: 'v1.2.0'
-      },
-    },
+    version: '1.2.1',
+    compilerSource: 'binary',
+    settings: {},
   },
-  zkSyncDeploy,
-  solidity: {
-    version: "0.8.11",
-  },
+  defaultNetwork: 'zkSyncTestnet',
   networks: {
     hardhat: {
-      zksync: true
+      // @ts-ignore
+      zksync: true,
     },
+    zkSyncTestnet,
+  },
+  solidity: {
+    version: '0.8.16',
   },
 };
+
+export default config;
