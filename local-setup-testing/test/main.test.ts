@@ -21,7 +21,7 @@ async function deployGreeter(deployer: Deployer): Promise<Contract> {
 }
 
 describe('Greeter', function () {
-  let deployer = new Deployer(hre, new Wallet(RICH_WALLET_PK));
+  const deployer = new Deployer(hre, new Wallet(RICH_WALLET_PK));
 
   it("Should return the new greeting once it's changed", async () => {
     const greeter = await deployGreeter(deployer);
