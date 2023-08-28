@@ -29,7 +29,7 @@ describe('Greeter', function () {
     const depositHandle = await deployer.zkWallet.deposit({
       to: deployer.zkWallet.address,
       token: utils.ETH_ADDRESS,
-      amount: ethers.utils.parseEther('0.001'),
+      amount: ethers.utils.parseEther('0.01'),
     });
 
     await depositHandle.wait();
