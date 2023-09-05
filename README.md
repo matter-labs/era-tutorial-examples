@@ -1,3 +1,3 @@
-# Complete tutorial examples
+# [DEPRECATED] zkSync Era Tutorial Examples Repo
 
-Complete examples for tutorials in the zkSync 2.0 documentation
+⚠️ This repository is deprecated and used to contain repositories of examples that interact with the zkSync Era network. For the actual examples repository please [follow this link](https://github.com/matter-labs/tutorials).
