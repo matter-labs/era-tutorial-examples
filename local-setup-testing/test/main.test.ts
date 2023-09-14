@@ -21,19 +21,7 @@ async function deployGreeter(deployer: Deployer): Promise<Contract> {
 }
 
 describe('Greeter', function () {
-  let deployer: Deployer;
-
-  before('Fund the wallet', async () => {
-    deployer = new Deployer(hre, new Wallet(RICH_WALLET_PK));
-
-    const depositHandle = await deployer.zkWallet.deposit({
-      to: deployer.zkWallet.address,
-      token: utils.ETH_ADDRESS,
-      amount: ethers.utils.parseEther('0.001'),
-    });
-
-    await depositHandle.wait();
-  });
+  const deployer = new Deployer(hre, new Wallet(RICH_WALLET_PK));
 
   it("Should return the new greeting once it's changed", async () => {
     const greeter = await deployGreeter(deployer);
